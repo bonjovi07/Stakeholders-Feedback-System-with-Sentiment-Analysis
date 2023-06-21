@@ -46,6 +46,7 @@ urlpatterns = [
         path('client_feedback/<str:token>/<str:encrypt>/', views.client_feedback, name='client_feedback'),
         path('process_feedback',views.process_feedback, name="process_feedback"),
         path('thankyou', views.thankyou, name="thankyou"),
+        path('link_expired', views.link_expired, name="link_expired"),
 
         #reports
         path('reportshome',views.reportshome, name='reportshome'),
@@ -59,6 +60,8 @@ urlpatterns = [
         path('<int:user_id>/reports_staff',views.reports_staff,name='reports_staff'),
         path('<int:user_id>/reports_staff_search',views.reports_staff_search,name='reports_staff_search'),
         path('<int:user_id>/<int:client_id>/reports_single',views.reports_single, name='reports_single'),
+        path('<int:user_id>/generate_pdf', views.generate_pdf, name='generate_pdf'),
+        path('output_convert', views.output_convert, name='output_convert'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

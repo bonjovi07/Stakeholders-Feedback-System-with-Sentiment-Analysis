@@ -13,18 +13,18 @@ Reports
 <h1> OVERALL REPORT </h1>
 <h4>OFFICE: <span>{{office.first_name}}</span></h4> 
 <div class="Search_bar">
-    <form action="{% url 'feedback:reports_viewreports_search' user.id %}" method="GET" id="search-form">
+    <form method="GET" id="search-form">
         <label>From:</label>
         <input type="date" name="date_from" id="date-from" placeholder="Date From" class="filter"/>
         <label>To:</label>
         <input type="date" name="date_to" id="date-to" placeholder="Date To" class="filter"/>
-        <input type="submit" id="filter-button" value="Filter Date"/>
+        <input type="submit" id="filter-button" value="Generate PDF"/>
     </form>
 </div>
 <div class="main">
     <div class="Container">
         <p id="SFF">STAKEHOLDERS' FEEDBACK FORM</p>
-            <table>
+            <table class="client_tbl">
                 <tr class="heads">
                     <th>Area of Concern</th>
                     <td>Highly</td>
@@ -121,5 +121,36 @@ Reports
     </div>
 </div>
 </div>
+
+
+<script>
+$(document).ready(function() {
+    $('#date-from, #date-to').on('change', function() {
+        var fromDate = $('#date-from').val();
+        var toDate = $('#date-to').val();
+        var formAction = "{% url 'feedback:reports_viewreports_search' user_id=office.id %}";
+
+        $.ajax({
+            url: formAction,
+            method: 'GET',
+            data: { date_from: fromDate, date_to: toDate },
+            success: function(response) {
+                var updatedHTML = $(response).find('.main').html();
+                $('.main').html(updatedHTML);
+            },
+            error: function(xhr, textStatus, error) {
+                console.log(error);
+            }
+        });
+    });
+
+    $('#filter-button').on('click', function() {
+        var formAction = "{% url 'feedback:generate_pdf' user_id=office.id %}";
+        $('#search-form').attr('action', formAction);
+    });
+});
+
+</script>
+
 {% endblock %}
 

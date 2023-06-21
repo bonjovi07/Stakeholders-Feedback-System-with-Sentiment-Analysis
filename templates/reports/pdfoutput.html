@@ -1,0 +1,126 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stakeholders' Feedback Report PDF {{date_from}}</title>
+    <link rel="stylesheet" href="{% static 'css/reports/pdfoutput.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <img src="{% static 'image/login/cvsu-logo.png' %}" >
+        <div class="text">
+            <p>Republic of the Philippines</p>
+            <h2>CAVITE STATE UNIVERSITY</h2>
+            <h3>Don Serverino delas Alas Campus</h3>
+            <p>Indang, Cavite</p>
+            <p id="title">STAKE HOLDERS' FEEDBACK REPORT</p>
+        </div>
+    </div>
+
+    <div class="body">
+        <p class="summary">Summary: {{office.first_name}} </p>
+        <p class="lined">Period Covered: <span class="underlined"> &nbsp;{% if date_from and date_to %}{{date_from}} to {{date_to}}{% elif date_from %}{{date_from}} {%elif date_to%}{{date_to}}{%else%}All Feedback{%endif%}</span></p>
+            <p><span class="end">
+        Total Number of Clients: <span class="underlined"></span>83</span></span></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Area of Concern</th>
+                    <th>Highly satisfied(5)</th>
+                    <th>Very satisfied(4)</th>
+                    <th>Moderately satisfied(3)</th>
+                    <th>Barely satisfied(2)</th>
+                    <th>Not satisfied(1)</th>
+                    <th>Average Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="head">A. Courtesy</td>
+                    <td>{{ courtesy_counts.5|default_if_none:'' }}</td>
+                    <td>{{ courtesy_counts.4|default_if_none:'' }}</td>
+                    <td>{{ courtesy_counts.3|default_if_none:'' }}</td>
+                    <td>{{ courtesy_counts.2|default_if_none:'' }}</td>
+                    <td>{{ courtesy_counts.1|default_if_none:'' }}</td>
+                    <td class="rating">{{ courtesy_rating }}</td>
+                </tr>
+                <tr>
+                    <td class="head">B. Service</td>
+                    <td colspan="6"></td>
+                </tr>
+                <tr>
+                    <td class="head">1. Quality</td>
+                    <td>{{ quality_counts.5|default_if_none:'' }}</td>
+                    <td>{{ quality_counts.4|default_if_none:'' }}</td>
+                    <td>{{ quality_counts.3|default_if_none:'' }}</td>
+                    <td>{{ quality_counts.2|default_if_none:'' }}</td>
+                    <td>{{ quality_counts.1|default_if_none:'' }}</td>
+                    <td class="rating">{{ quality_rating }} </td>
+                </tr>
+                <tr>
+                    <td class="head">2. Timeliness</td>
+                    <td>{{ timeless_counts.5|default_if_none:'' }}</td>
+                    <td>{{ timeless_counts.4|default_if_none:'' }}</td>
+                    <td>{{ timeless_counts.3|default_if_none:'' }}</td>
+                    <td>{{ timeless_counts.2|default_if_none:'' }}</td>
+                    <td>{{ timeless_counts.1|default_if_none:'' }}</td>
+                    <td class="rating">{{ timeless_rating }} </td>
+                </tr>
+                <tr>
+                    <td class="head">3. Efficiency</td>
+                    <td>{{ efficiency_counts.5|default_if_none:'' }}</td>
+                    <td>{{ efficiency_counts.4|default_if_none:'' }}</td>
+                    <td>{{ efficiency_counts.3|default_if_none:'' }}</td>
+                    <td>{{ efficiency_counts.2|default_if_none:'' }}</td>
+                    <td>{{ efficiency_counts.1|default_if_none:'' }}</td>
+                    <td class="rating">{{ efficiency_rating }} </td>
+                </tr>
+                <tr>
+                    <td class="head">C. Physical condition of office/work space</td>
+                    <td colspan="6"></td>
+                </tr>
+                <tr>
+                    <td class="head">1. Cleanliness</td>
+                    <td>{{ cleanliness_counts.5|default_if_none:'' }}</td>
+                    <td>{{ cleanliness_counts.4|default_if_none:'' }}</td>
+                    <td>{{ cleanliness_counts.3|default_if_none:'' }}</td>
+                    <td>{{ cleanliness_counts.2|default_if_none:'' }}</td>
+                    <td>{{ cleanliness_counts.1|default_if_none:'' }}</td>
+                    <td class="rating">{{ cleanliness_rating }} </td>
+                </tr>
+                <tr>
+                    <td class="head">2. Comfort</td>
+                    <td>{{ comfort_counts.5|default_if_none:'' }}</td>
+                    <td>{{ comfort_counts.4|default_if_none:'' }}</td>
+                    <td>{{ comfort_counts.3|default_if_none:'' }}</td>
+                    <td>{{ comfort_counts.2|default_if_none:'' }}</td>
+                    <td>{{ comfort_counts.1|default_if_none:'' }}</td>
+                    <td class="rating">{{ comfort_rating }} </td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="rating_all">Overall Average Rating &nbsp;&nbsp;</td>
+                    <th>{{feedback_average}}</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="comments">
+            <p>Comments/Suggestions: </p>
+            <div class="comment-table">
+                {% for feedback in feedbacks %}
+                    {% if forloop.counter <= 30 %}  <!-- Limit the loop to 5 iterations -->
+                        <p>{{ forloop.counter }}. {{ feedback.feedback_comments }}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

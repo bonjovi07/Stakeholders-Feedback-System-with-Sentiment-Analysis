@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-a1#-0_vn1wodxd!79fno%!8m$4-0$d_2e-$*&(qf2kfxoqs4**
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    'bonjovi07.pythonanywhere.com',
+    'cvsufeedbackform-bonjovi07.pythonanywhere.com'
+    ]
 
 
 # Application definition
@@ -34,7 +38,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'feedback_form',
     'django.contrib.admin',
-    'django.contrib.auth',  
+    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -57,7 +61,7 @@ ROOT_URLCONF = 'sentiment_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,11 +83,11 @@ WSGI_APPLICATION = 'sentiment_app.wsgi.application'
 DATABASES = {
     'default': {
 	    'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sentiment_app',
-        'USERNAME': 'root',
-        'PASSWORD': 'bjmixer07xd',
-        'POST': '3306',
-        'HOST': 'localhost',
+        'NAME': 'bonjovi07$sentiment_app',
+        'USERNAME': 'bonjovi07',
+        'PASSWORD': 'anndrea120499',
+        'PORT': '',
+        'HOST': 'bonjovi07.mysql.pythonanywhere-services.com',
     }
 }
 

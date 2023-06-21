@@ -7,11 +7,11 @@
 {% endblock%}
 
 {% block title %}
-Reports
+    Reports | {{client.client_name}} Feedback
 {% endblock %}
 
 {% block content %}
-<h4>Client Name: <span>{{client.client_name}}</span></h4> 
+<h4>Client Name: <span>{{client.client_name}}</span></h4>
 <h4>Date: <span>{{ client.client_visit_date|timezone:"Asia/Manila"|date:"F j, Y H:i A" }}</span></h4>
 <h4>Feedback Polarity: <span>{{sentiment.sentiment_analysis}}</span></h4>
 <div class="main">

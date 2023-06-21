@@ -6,13 +6,13 @@
 {% endblock%}
 
 {% block title %}
-Reports
+    Reports | Staff Report Summary
 {% endblock %}
 
 {% block content %}
     <div>
         <h1> EMPLOYEE REPORTS </h1>
-        <h4>OFFICE: <span>{{ office.first_name }}</span></h4> 
+        <h4>OFFICE: <span>{{ office.first_name }}</span></h4>
     </div>
     <div class="Search_bar">
         <form action="{% url 'feedback:reports_staff_search' office.id %}" method="GET" id="search-form">
@@ -57,7 +57,7 @@ Reports
                 </tr>
                 {% endfor %}
             </table>
-    
+
             <div class='back'>
                 <a href="{% url 'feedback:reports_officesummary' office.id %}"><button type="button" class='back_button'>Back</button></a>
             </div>

@@ -22,20 +22,25 @@ from nltk.tokenize import word_tokenize
 from nltk.classify import NaiveBayesClassifier
 from googletrans import Translator
 
+import pdfkit
+from django.template.loader import get_template
+from django.template import Context
+from functools import wraps
+
 # Create your views here.
 
 def index(request):
     if request.user.is_authenticated:
         return render(request, 'home.html',)
     else:
-        return render(request, 'getstart/getstart.html',) 
-    
+        return render(request, 'getstart/getstart.html',)
+
 def loginview(request):
     if request.user.is_authenticated:
         return render(request, 'home.html',)
     else:
         return render(request, 'login/login.html')
-    
+
 def process(request):
     username = request.POST.get('username')
     password = request.POST.get('password')
@@ -52,7 +57,7 @@ def process(request):
         messages.error(request, "Login Failed")
         return redirect('/loginview')
 
-    
+
 def processlogout(request):
     logout(request)
     return HttpResponseRedirect("loginview")
@@ -275,7 +280,7 @@ def employeelist(request):
         employees = UserEmployees.objects.filter(office_user_id__is_active=True).order_by('-is_active','-date_added')
     else:
         employees = UserEmployees.objects.filter(office_user_id=request.user.id)
-    
+
     users = User.objects.filter(is_active=True)
     paginator = Paginator(employees,10)
 
@@ -344,7 +349,7 @@ def processaddemployee(request):
     officeID = request.POST.get("acc_id")
 
     if officeID:
-        create_office = UserEmployees.objects.create(first_name = fname, last_name=lname, position = pos,office = off,office_user_id=officeID) 
+        create_office = UserEmployees.objects.create(first_name = fname, last_name=lname, position = pos,office = off,office_user_id=officeID)
         create_office.save()
         return HttpResponseRedirect('/employeelist')
     else:
@@ -395,7 +400,7 @@ def process_edit_employee(request, employee_id):
         employee.position = pos
         employee.office = off
         employee.office_user_id = officeID
-        
+
         if officeID:
             employee.save()
         else:
@@ -462,18 +467,21 @@ def client_feedback(request, token, encrypt):
     current_time = timezone.now()
 
     if current_time > expiration_time:
-        return HttpResponse("Link has expired.")
+        return HttpResponseRedirect('/link_expired')
     else:
         user = default_token_generator.check_token(request.user, token)
         return render(request, 'feedback/client_feedback.html', {'user': user, 'client':client})
-    
+
 @login_required(login_url='/loginview')
 def thankyou(request):
     return render(request, 'feedback/thankyou.html')
 
+@login_required(login_url='/loginview')
+def link_expired(request):
+    return render(request, 'feedback/link_expired.html')
 
 def analyze_sentiment(user_input):
-    dataset_file = "D:/wamp64/www/feedback/sentiment_app/static/dataset.txt"
+    dataset_file = "/home/bonjovi07/.virtualenvs/sentiment_app/sentiment_app/static/dataset.txt"
 
     def append_to_dataset(text, sentiment):
         with open(dataset_file, "a") as file:
@@ -514,7 +522,7 @@ def analyze_sentiment(user_input):
         translator = Translator(service_urls=['translate.google.com'])
         translation = translator.translate(text, dest='en')
         return translation.text
-    
+
     user_input = translate_tagalog_to_english(user_input)
     preprocessed_input = preprocess_text(user_input)
     sentiment = classifier.classify(preprocessed_input)
@@ -587,7 +595,7 @@ def reportshome(request):
             feedback_average = feedback_average/UserFeedback.objects.filter(feedback_user_id = request.user.id).count()
     else:
         feedback_average = 0.00
-        
+
     feedback_average = format(feedback_average, '.2f')
     obj = {
         "user_count":user_count,
@@ -632,7 +640,10 @@ def report_offices_search(request):
 
 @login_required(login_url='/loginview')
 def reports_officesummary(request, user_id):
-    office = User.objects.get(id=user_id)
+    if request.user.userclass.status == 1:
+        office = User.objects.get(id=user_id)
+    else:
+        office = User.objects.get(id=request.user.id)
     employees = UserEmployees.objects.filter(office_user_id=office.id).values_list('id', flat=True)
     clients = UserClients.objects.filter(attending_staff_id__in=employees)
     client_count = UserClients.objects.filter(attending_staff_id__in=employees).count()
@@ -655,7 +666,10 @@ def reports_officesummary(request, user_id):
 
 @login_required(login_url='/loginview')
 def reports_feedbacks(request,user_id):
-    office = User.objects.get(id = user_id)
+    if request.user.userclass.status == 1:
+        office = User.objects.get(id=user_id)
+    else:
+        office = User.objects.get(id=request.user.id)
     employees = UserEmployees.objects.filter(office_user_id=office.id).values_list('id', flat=True)
     clients = UserClients.objects.filter(attending_staff_id__in=employees).order_by('-client_visit_date')
 
@@ -663,11 +677,14 @@ def reports_feedbacks(request,user_id):
     for client in clients:
         feedback = client.userfeedback_set.first()
         if feedback:
-            rating = (feedback.feedback_courtesy + feedback.feedback_quality + feedback.feedback_timeless + feedback.feedback_efficiency + feedback.feedback_comfort + feedback.feedback_cleanliness)/6
-            rating= format(rating, '.2f')
+            rating = (feedback.feedback_courtesy + feedback.feedback_quality + feedback.feedback_timeless + feedback.feedback_efficiency + feedback.feedback_comfort + feedback.feedback_cleanliness) / 6
+            rating = format(rating, '.2f')
 
             sentiment = feedback.sentiment_set.first()
-            client.sentiment = sentiment.sentiment_analysis
+            if sentiment:
+                client.sentiment = sentiment.sentiment_analysis
+            else:
+                client.sentiment = None
             client.rating = rating
         else:
             client.sentiment = None
@@ -691,7 +708,10 @@ def reports_feedbacks_search(request, user_id):
     date_from = request.GET.get('date_from')
     date_to = request.GET.get('date_to')
 
-    office = User.objects.get(id=user_id)
+    if request.user.userclass.status == 1:
+        office = User.objects.get(id=user_id)
+    else:
+        office = User.objects.get(id=request.user.id)
     employees = UserEmployees.objects.filter(office_user_id=office.id).values_list('id', flat=True)
     clients = UserClients.objects.filter(
         Q(client_name__icontains=term, attending_staff_id__in=employees) |
@@ -740,7 +760,10 @@ def reports_feedbacks_search(request, user_id):
 
 @login_required(login_url='/loginview')
 def reports_single(request,user_id,client_id):
-        office = User.objects.get(id = user_id)
+        if request.user.userclass.status == 1:
+            office = User.objects.get(id=user_id)
+        else:
+            office = User.objects.get(id=request.user.id)
         client = get_object_or_404(UserClients, id=client_id)
         feedback = UserFeedback.objects.get(feedback_client_id = client_id)
 
@@ -758,7 +781,10 @@ def reports_single(request,user_id,client_id):
 
 @login_required(login_url='/loginview')
 def reports_viewreports(request,user_id):
-    office = User.objects.get(id = user_id)
+    if request.user.userclass.status == 1:
+        office = User.objects.get(id=user_id)
+    else:
+        office = User.objects.get(id=request.user.id)
     feedbacks = UserFeedback.objects.filter(feedback_user_id = office.id)
 
     courtesy_counts = {}
@@ -854,13 +880,17 @@ def reports_viewreports(request,user_id):
         "feedbacks": feedbacks,
         "feedback_average": format(feedback_average, '.2f'),
         "total_feedbacks": total_feedbacks,
+        "user_id":user_id,
     }
 
     return render(request, 'reports/reports_viewreports.html', context)
 
 @login_required(login_url='/loginview')
 def reports_viewreports_search(request, user_id):
-    office = User.objects.get(id=user_id)
+    if request.user.userclass.status == 1:
+        office = User.objects.get(id=user_id)
+    else:
+        office = User.objects.get(id=request.user.id)
     feedbacks = UserFeedback.objects.filter(feedback_user_id=office.id)
 
     date_from = request.GET.get('date_from')
@@ -972,17 +1002,153 @@ def reports_viewreports_search(request, user_id):
 
     return render(request, 'reports/reports_viewreports.html', context)
 
+#Generate Feedback PDF
+def output_convert(request):
+    user_id = request.GET.get('user_id')
+    office = User.objects.get(id=user_id)
+    feedbacks = UserFeedback.objects.filter(feedback_user_id=office.id)
+
+    date_from = request.GET.get('date_from')
+    date_to = request.GET.get('date_to')
+
+    if date_from:
+        date_from = datetime.strptime(date_from, '%Y-%m-%d')
+        feedbacks = feedbacks.filter(feedback_client__client_visit_date__gte=date_from)
+
+    if date_to:
+        date_to = datetime.strptime(date_to, '%Y-%m-%d')
+        date_to = date_to + timedelta(days=1)
+        feedbacks = feedbacks.filter(feedback_client__client_visit_date__lt=date_to)
+
+    courtesy_counts = {}
+    courtesy_rating = 0.00
+    quality_counts = {}
+    quality_rating = 0.00
+    timeless_counts = {}
+    timeless_rating = 0.00
+    efficiency_counts = {}
+    efficiency_rating = 0.00
+    cleanliness_counts = {}
+    cleanliness_rating = 0.00
+    comfort_counts = {}
+    comfort_rating = 0.00
+
+    if feedbacks:
+        for feedback in feedbacks:
+            if feedback.feedback_courtesy in courtesy_counts:
+                courtesy_counts[feedback.feedback_courtesy] += 1
+            else:
+                courtesy_counts[feedback.feedback_courtesy] = 1
+            courtesy_rating += feedback.feedback_courtesy
+
+            if feedback.feedback_quality in quality_counts:
+                quality_counts[feedback.feedback_quality] += 1
+            else:
+                quality_counts[feedback.feedback_quality] = 1
+            quality_rating += feedback.feedback_quality
+
+            if feedback.feedback_timeless in timeless_counts:
+                timeless_counts[feedback.feedback_timeless] += 1
+            else:
+                timeless_counts[feedback.feedback_timeless] = 1
+            timeless_rating += feedback.feedback_timeless
+
+            if feedback.feedback_efficiency in efficiency_counts:
+                efficiency_counts[feedback.feedback_efficiency] += 1
+            else:
+                efficiency_counts[feedback.feedback_efficiency] = 1
+            efficiency_rating += feedback.feedback_efficiency
+
+            if feedback.feedback_cleanliness in cleanliness_counts:
+                cleanliness_counts[feedback.feedback_cleanliness] += 1
+            else:
+                cleanliness_counts[feedback.feedback_cleanliness] = 1
+            cleanliness_rating += feedback.feedback_cleanliness
+
+            if feedback.feedback_comfort in comfort_counts:
+                comfort_counts[feedback.feedback_comfort] += 1
+            else:
+                comfort_counts[feedback.feedback_comfort] = 1
+            comfort_rating += feedback.feedback_comfort
+
+        total_feedbacks = len(feedbacks)
+        courtesy_rating = courtesy_rating / total_feedbacks
+        quality_rating = quality_rating / total_feedbacks
+        timeless_rating = timeless_rating / total_feedbacks
+        efficiency_rating = efficiency_rating / total_feedbacks
+        cleanliness_rating = cleanliness_rating / total_feedbacks
+        comfort_rating = comfort_rating / total_feedbacks
+
+    else:
+        total_feedbacks = 0
+
+    feedback_average = 0.00
+    if total_feedbacks > 0:
+        for feedback in feedbacks:
+            rating = (
+                feedback.feedback_courtesy
+                + feedback.feedback_quality
+                + feedback.feedback_timeless
+                + feedback.feedback_efficiency
+                + feedback.feedback_comfort
+                + feedback.feedback_cleanliness
+            ) / 6
+            feedback_average += rating
+        feedback_average = feedback_average / total_feedbacks
+
+    context = {
+        'user_id': user_id,
+        'date_from': date_from,
+        'date_to': date_to,
+        "courtesy_counts": courtesy_counts,
+        "courtesy_rating": format(courtesy_rating, '.2f'),
+        "quality_counts": quality_counts,
+        "quality_rating": format(quality_rating, '.2f'),
+        "timeless_counts": timeless_counts,
+        "timeless_rating": format(timeless_rating, '.2f'),
+        "efficiency_counts": efficiency_counts,
+        "efficiency_rating": format(efficiency_rating, '.2f'),
+        "cleanliness_counts": cleanliness_counts,
+        "cleanliness_rating": format(cleanliness_rating, '.2f'),
+        "comfort_counts": comfort_counts,
+        "comfort_rating": format(comfort_rating, '.2f'),
+        "office": office,
+        "feedbacks": feedbacks,
+        "feedback_average": format(feedback_average, '.2f'),
+        "total_feedbacks": total_feedbacks,
+    }
+
+    return render(request, 'reports/pdfoutput.html', context)
+
+config = pdfkit.configuration()
+
+@login_required(login_url='/loginview')
+def generate_pdf(request, user_id):
+    date_from = request.GET.get('date_from')
+    date_to = request.GET.get('date_to')
+
+    pdf = pdfkit.from_url(request.build_absolute_uri(reverse('feedback:output_convert')) + f'?date_from={date_from}&date_to={date_to}&user_id={user_id}', False, configuration=config)
+    response = HttpResponse(pdf, content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="Stakeholders\' Feedback Results.pdf"'
+    return response
+
+
+
+
 
 @login_required(login_url='/loginview')
 def reports_staff(request, user_id):
-    office = User.objects.get(id = user_id)
+    if request.user.userclass.status == 1:
+        office = User.objects.get(id=user_id)
+    else:
+        office = User.objects.get(id=request.user.id)
     employees = UserEmployees.objects.filter(office_user_id=office.id).annotate(client_count=Count('userclients'))
 
     for employee in employees:
         feedbacks = UserFeedback.objects.filter(feedback_client_id__attending_staff_id=employee.id)
         rating_sum = 0.0
         feedback_count = feedbacks.count()
-    
+
         for feedback in feedbacks:
             rating_sum += (feedback.feedback_courtesy + feedback.feedback_quality + feedback.feedback_timeless + feedback.feedback_efficiency + feedback.feedback_comfort + feedback.feedback_cleanliness) / 6.0
 
@@ -1000,7 +1166,10 @@ def reports_staff(request, user_id):
 
 @login_required(login_url='/loginview')
 def reports_staff_search(request, user_id):
-    office = User.objects.get(id=user_id)
+    if request.user.userclass.status == 1:
+        office = User.objects.get(id=user_id)
+    else:
+        office = User.objects.get(id=request.user.id)
     employees = UserEmployees.objects.filter(office_user_id=office.id)
 
     date_from = request.GET.get('date_from')

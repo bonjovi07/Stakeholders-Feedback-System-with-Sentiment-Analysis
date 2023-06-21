@@ -1,5 +1,6 @@
 The service is actually nice.	positive
 The staffs are accommodating.	positive
+My experience here is just fine.	neutral
 I'm not happy being here. The service is horrible.	negative
 Great experience.	positive
 It is okay.	neutral
@@ -195,3 +196,634 @@ They provided accurate and reliable information.	neutral
 The customer service representative addressed customer concerns effectively.	neutral
 The office had a standard waiting time for appointments.	neutral
 The employee is kind, the office is clean too!	positive
+The service is actually nice.	positive
+The staffs are accommodating.	positive
+My experience here is just fine.	neutral
+I'm not happy being here. The service is horrible.	negative
+The staffs are accommodating.	positive
+My experience here is just fine.	neutral
+I'm not happy being here. The service is horrible.	negative
+The team members are highly professional and competent.	positive
+The office atmosphere is friendly and welcoming.	positive
+The management is supportive and approachable.	positive
+The communication within the office is clear and effective.	positive
+The office facilities are well-maintained and clean.	positive
+The company provides ample opportunities for professional growth.	positive
+The workload is manageable and balanced.	positive
+The office culture promotes collaboration and teamwork.	positive
+The supervisors provide constructive feedback for improvement.	positive
+The office is equipped with modern technology and tools.	positive
+The company encourages creativity and innovation.	positive
+The office location is convenient and accessible.	positive
+The work environment is inclusive and diverse.	positive
+The office events and activities foster team bonding.	positive
+The company values employee well-being and work-life balance.	positive
+The office has a positive and energetic vibe.	positive
+The training and development programs are beneficial.	positive
+The company recognizes and appreciates employee achievements.	positive
+The office provides flexibility in work schedules.	positive
+The team collaborates effectively to achieve goals.	positive
+The office maintains a high standard of professionalism.	positive
+The company has a strong leadership team.	positive
+The office encourages open and transparent communication.	positive
+The company offers competitive compensation and benefits.	positive
+The office follows ethical business practices.	positive
+The company invests in employee training and growth.	positive
+The office promotes a healthy work-life balance.	positive
+The team members are always willing to lend a helping hand.	positive
+The office fosters a culture of continuous learning.	positive
+The company has a strong commitment to customer satisfaction.	positive
+The office promotes a safe and inclusive work environment.	positive
+The company values employee feedback and suggestions.	positive
+The office has a well-organized and efficient workflow.	positive
+The company encourages work autonomy and independence.	positive
+The office provides opportunities for cross-functional collaboration.	positive
+The team members demonstrate professionalism and respect.	positive
+The office celebrates and acknowledges employee milestones.	positive
+The company embraces diversity and promotes equal opportunities.	positive
+The office maintains a high level of cleanliness and hygiene.	positive
+The company encourages work-life integration.	positive
+The office fosters a culture of trust and transparency.	positive
+The team members are proactive and motivated.	positive
+The office promotes a positive work-life balance.	positive
+The company supports employee well-being through wellness programs.	positive
+The office has a strong sense of camaraderie.	positive
+The office lacks proper communication channels.	negative
+The management is unresponsive to employee concerns.	negative
+The office is disorganized and chaotic.	negative
+The company does not provide adequate training and development opportunities.	negative
+The workload is overwhelming and unrealistic.	negative
+The office culture is toxic and filled with negativity.	negative
+The company lacks transparency in decision-making processes.	negative
+The office facilities are outdated and poorly maintained.	negative
+The team members often engage in unprofessional behavior.	negative
+The office is plagued with frequent technical issues.	negative
+The company fails to recognize and appreciate employee contributions.	negative
+The office environment is highly stressful and tense.	negative
+The company has a high turnover rate and lacks employee retention strategies.	negative
+The office lacks work-life balance initiatives.	negative
+The team members often engage in conflicts and disagreements.	negative
+The office is understaffed, leading to excessive workload.	negative
+The company does not provide sufficient resources and tools for work.	negative
+The office is not inclusive and fails to embrace diversity.	negative
+The management does not effectively address employee grievances.	negative
+The company does not value work-life balance.	negative
+The office suffers from poor leadership and direction.	negative
+The team members do not collaborate effectively.	negative
+The office lacks clear goals and objectives.	negative
+The company does not invest in employee professional development.	negative
+The office experiences frequent interruptions and distractions.	negative
+The company has a rigid and inflexible work culture.	negative
+The office is plagued with favoritism and biased treatment.	negative
+The management fails to provide timely feedback and performance evaluations.	negative
+The company does not offer competitive salaries and benefits.	negative
+The office lacks opportunities for career advancement.	negative
+The team members are not supportive and cooperative.	negative
+The office suffers from poor employee morale.	negative
+The company does not foster a sense of belonging and inclusivity.	negative
+The office experiences frequent micromanagement.	negative
+The management does not value employee opinions and suggestions.	negative
+The company does not prioritize employee well-being and mental health.	negative
+The office has a high level of bureaucracy and red tape.	negative
+The team members lack proper training and skills.	negative
+The office has a poor work-life balance culture.	negative
+The company does not provide adequate recognition for employee achievements.	negative
+The office suffers from poor teamwork and collaboration.	negative
+The company does not promote a healthy work environment.	negative
+The office experiences frequent delays and missed deadlines.	negative
+The management does not effectively address conflicts within the team.	negative
+The company lacks a clear vision and strategy.	negative
+The office does not offer sufficient opportunities for employee feedback.	negative
+The team members are demotivated and disengaged.	negative
+The office suffers from poor communication and coordination.	negative
+The company does not encourage or support work flexibility.	negative
+The office experiences a lack of recognition and career growth opportunities.	negative
+The office has standard work procedures in place.	neutral
+The company follows industry-standard practices.	neutral
+The team members complete their assigned tasks on time.	neutral
+The office provides basic employee benefits.	neutral
+The company has average employee turnover rates.	neutral
+The office maintains a moderate level of cleanliness.	neutral
+The management communicates necessary information to the employees.	neutral
+The team members have average productivity levels.	neutral
+The office hours are standard and predictable.	neutral
+The company provides average training opportunities for employees.	neutral
+The office adheres to basic safety regulations.	neutral
+The team members interact professionally with each other.	neutral
+The office has an average level of noise and distractions.	neutral
+The company offers standard vacation and leave policies.	neutral
+The office has moderate opportunities for advancement.	neutral
+The team members have average technical skills.	neutral
+The office is located in a convenient area.	neutral
+The company has average employee performance evaluations.	neutral
+The office maintains a moderate level of employee morale.	neutral
+The management follows standard communication protocols.	neutral
+The team members complete their work with average accuracy.	neutral
+The office provides basic equipment and tools for work.	neutral
+The company has average customer satisfaction ratings.	neutral
+The office has a moderate level of employee engagement.	neutral
+The team members receive average support from the management.	neutral
+The office has standard break and lunchtime policies.	neutral
+The company offers average opportunities for networking.	neutral
+The office has moderate opportunities for cross-department collaboration.	neutral
+The team members have average attendance and punctuality.	neutral
+The office has a moderate level of employee diversity.	neutral
+The company has average employee performance recognition programs.	neutral
+The office has standard meeting and conference room facilities.	neutral
+The team members have average problem-solving skills.	neutral
+The office provides basic onboarding and orientation processes.	neutral
+The company offers standard employee benefits packages.	neutral
+The office has moderate opportunities for skill development.	neutral
+The team members demonstrate average teamwork abilities.	neutral
+The office maintains an average level of employee satisfaction.	neutral
+The management has standard leadership and managerial skills.	neutral
+The team members have average adaptability to change.	neutral
+The office has a moderate level of employee autonomy.	neutral
+The company provides average support for work-life integration.	neutral
+The office has standard protocols for handling employee grievances.	neutral
+The team members have average problem escalation procedures.	neutral
+The office has moderate opportunities for internal mobility.	neutral
+The company offers average employee recognition programs.	neutral
+The office has standard policies for data privacy and security.	neutral
+The team members have average conflict resolution skills.	neutral
+The office maintains a moderate level of employee trust.	neutral
+The office has well-organized filing systems.	neutral
+The team members collaborate effectively on projects.	positive
+The management provides clear guidelines for task completion.	positive
+The office experiences occasional technical glitches.	negative
+The company offers competitive salaries and benefits.	positive
+The office has a moderate level of employee engagement.	neutral
+The team members demonstrate average problem-solving skills.	neutral
+The management encourages open communication channels.	positive
+The office maintains a clean and tidy workspace.	positive
+The company lacks diversity in its leadership team.	negative
+The office promotes a culture of continuous improvement.	positive
+The team members exhibit average time management skills.	neutral
+The office location is convenient for commuting.	positive
+The company does not offer flexible work arrangements.	negative
+The office has standard office equipment and supplies.	neutral
+The team members show a willingness to help each other.	positive
+The management needs to provide more constructive feedback.	negative
+The office experiences occasional delays in project timelines.	negative
+The company values employee feedback and suggestions.	positive
+The office fosters a collaborative work environment.	positive
+The team members have average customer service skills.	neutral
+The office has a moderate level of employee satisfaction.	neutral
+The company provides opportunities for career advancement.	positive
+The office follows established safety protocols.	neutral
+The team members demonstrate average conflict resolution skills.	neutral
+The management communicates company goals effectively.	positive
+The office experiences occasional equipment maintenance issues.	negative
+The company promotes work-life balance initiatives.	positive
+The office has a moderate level of employee morale.	neutral
+The team members have average presentation skills.	neutral
+The office location has sufficient parking facilities.	neutral
+The company needs to improve its employee recognition programs.	negative
+The office maintains average levels of teamwork and collaboration.	neutral
+The team members exhibit average creativity and innovation.	neutral
+The management supports professional development opportunities.	positive
+The office experiences occasional communication breakdowns.	negative
+The company has standard policies for leave and time off.	neutral
+The office provides basic training for new hires.	neutral
+The team members demonstrate average adaptability to change.	neutral
+The office has moderate opportunities for cross-departmental projects.	neutral
+The company needs to address workplace diversity issues.	negative
+The office experiences occasional supply shortages.	negative
+The team members show average leadership potential.	neutral
+The management encourages a positive work environment.	positive
+The office has standard procedures for data security.	neutral
+The company values employee well-being and work-life integration.	positive
+The office maintains average levels of employee communication.	neutral
+The team members exhibit average problem escalation procedures.	neutral
+The office location provides access to public transportation.	neutral
+The company could improve its employee onboarding process.	negative
+The office has a moderate level of employee trust.	neutral
+The team members have average negotiation skills.	neutral
+The management demonstrates average conflict management abilities.	neutral
+The office experiences occasional power outages.	negative
+The company provides average opportunities for networking.	neutral
+The office has a moderate level of employee autonomy.	neutral
+The team members exhibit average attention to detail.	neutral
+The management needs to improve employee performance evaluations.	negative
+The office maintains standard levels of employee professionalism.	neutral
+The company promotes employee health and wellness programs.	positive
+The office experiences occasional internet connectivity issues.	negative
+The team members demonstrate average decision-making skills.	neutral
+The office has a moderate level of employee motivation.	neutral
+The company supports community engagement and volunteer initiatives.	positive
+The office location offers nearby amenities for employees.	positive
+The team members exhibit average customer relationship management skills.	neutral
+The management fosters a culture of open-mindedness and inclusivity.	positive
+The office has standard protocols for managing conflicts.	neutral
+The company provides average opportunities for learning and growth.	neutral
+The office has a moderate level of employee accountability.	neutral
+The team members demonstrate average data analysis skills.	neutral
+The office location provides a pleasant view from the windows.	positive
+The company could improve its performance feedback mechanisms.	negative
+The office maintains average levels of employee satisfaction.	neutral
+The team members exhibit average presentation skills.	neutral
+The management demonstrates average decision-making abilities.	neutral
+The office experiences occasional maintenance disruptions.	negative
+The company values employee input and suggestions.	positive
+The office follows standard procedures for handling customer complaints.	neutral
+The team members have average interpersonal communication skills.	neutral
+The office has a moderate level of employee flexibility.	neutral
+The company provides average resources for professional development.	neutral
+The office experiences occasional software compatibility issues.	negative
+The team members demonstrate average research and analytical skills.	neutral
+The management fosters a positive team-oriented work culture.	positive
+The office has standard policies for maintaining confidentiality.	neutral
+The company promotes a healthy work-life balance for employees.	positive
+The office maintains a moderate level of employee cooperation.	neutral
+The team members exhibit average project management skills.	neutral
+The management encourages a culture of continuous learning.	positive
+The office location is easily accessible for clients and visitors.	positive
+The company offers average opportunities for mentorship programs.	neutral
+The office has a moderate level of employee job satisfaction.	neutral
+The team members show average problem-solving abilities.	neutral
+The management provides average support for employee well-being.	neutral
+The office experiences occasional temperature control issues.	negative
+The company values employee diversity and inclusion.	positive
+The office follows standard procedures for handling confidential information.	neutral
+The team members have average communication skills.	neutral
+The office location has nearby dining options for employees.	positive
+The company could improve its performance recognition programs.	negative
+The office maintains a moderate level of employee motivation.	neutral
+The team members exhibit average attention to detail.	neutral
+The management demonstrates average conflict resolution abilities.	neutral
+The office experiences occasional power outages.	negative
+The company provides average opportunities for networking.	neutral
+The office has a moderate level of employee autonomy.	neutral
+The team members exhibit average negotiation skills.	neutral
+The management needs to improve conflict management abilities.	negative
+The office maintains standard levels of employee professionalism.	neutral
+The company promotes employee health and wellness programs.	positive
+The office experiences occasional internet connectivity issues.	negative
+The team members demonstrate average decision-making skills.	neutral
+The office has a moderate level of employee motivation.	neutral
+The company supports community engagement and volunteer initiatives.	positive
+The office location offers nearby amenities for employees.	positive
+The team members exhibit average customer relationship management skills.	neutral
+The management fosters a culture of open-mindedness and inclusivity.	positive
+The office has standard protocols for managing conflicts.	neutral
+The company provides average opportunities for learning and growth.	neutral
+The office has a moderate level of employee accountability.	neutral
+The team members demonstrate average data analysis skills.	neutral
+The office location provides a pleasant view from the windows.	positive
+The company could improve its performance feedback mechanisms.	negative
+The office maintains average levels of employee satisfaction.	neutral
+The team members exhibit average presentation skills.	neutral
+The management demonstrates average decision-making abilities.	neutral
+The office experiences occasional maintenance disruptions.	negative
+The company values employee input and suggestions.	positive
+The office follows standard procedures for handling customer complaints.	neutral
+The team members have average interpersonal communication skills.	neutral
+The office has a moderate level of employee flexibility.	neutral
+The company provides average resources for professional development.	neutral
+The office experiences occasional software compatibility issues.	negative
+The team members demonstrate average research and analytical skills.	neutral
+The management fosters a positive team-oriented work culture.	positive
+The office has standard policies for maintaining confidentiality.	neutral
+The company promotes a healthy work-life balance for employees.	positive
+The office maintains a moderate level of employee cooperation.	neutral
+The team members exhibit average project management skills.	neutral
+The management encourages a culture of continuous learning.	positive
+The office location is easily accessible for clients and visitors.	positive
+The company offers average opportunities for mentorship programs.	neutral
+The office has a moderate level of employee job satisfaction.	neutral
+The team members show average problem-solving abilities.	neutral
+The management provides average support for employee well-being.	neutral
+The office experiences occasional temperature control issues.	negative
+The company values employee diversity and inclusion.	positive
+The office follows standard procedures for handling confidential information.	neutral
+The team members have average communication skills.	neutral
+The office location has nearby dining options for employees.	positive
+The company could improve its performance recognition programs.	negative
+The office maintains a moderate level of employee motivation.	neutral
+The team members exhibit average attention to detail.	neutral
+The management demonstrates average conflict resolution abilities.	neutral
+The office experiences occasional power outages.	negative
+The company provides average opportunities for networking.	neutral
+The office has a moderate level of employee autonomy.	neutral
+The team members exhibit average negotiation skills.	neutral
+The management needs to improve conflict management abilities.	negative
+The office maintains standard levels of employee professionalism.	neutral
+The company promotes employee health and wellness programs.	positive
+The office experiences occasional internet connectivity issues.	negative
+The team members demonstrate average decision-making skills.	neutral
+The office has a moderate level of employee motivation.	neutral
+The company supports community engagement and volunteer initiatives.	positive
+The office location offers nearby amenities for employees.	positive
+The team members exhibit average customer relationship management skills.	neutral
+The management fosters a culture of open-mindedness and inclusivity.	positive
+The office has standard protocols for managing conflicts.	neutral
+The company provides average opportunities for learning and growth.	neutral
+The office has a moderate level of employee accountability.	neutral
+The team members demonstrate average data analysis skills.	neutral
+The office location provides a pleasant view from the windows.	positive
+The company could improve its performance feedback mechanisms.	negative
+The office maintains average levels of employee satisfaction.	neutral
+The team members exhibit average presentation skills.	neutral
+The management demonstrates average decision-making abilities.	neutral
+The office experiences occasional maintenance disruptions.	negative
+The company values employee input and suggestions.	positive
+The office follows standard procedures for handling customer complaints.	neutral
+The team members have average interpersonal communication skills.	neutral
+The office has a moderate level of employee flexibility.	neutral
+The company provides average resources for professional development.	neutral
+The office experiences occasional software compatibility issues.	negative
+The team members demonstrate average research and analytical skills.	neutral
+The management fosters a positive team-oriented work culture.	positive
+The office has standard policies for maintaining confidentiality.	neutral
+The company promotes a healthy work-life balance for employees.	positive
+The office maintains a moderate level of employee cooperation.	neutral
+The team members exhibit average project management skills.	neutral
+The management encourages a culture of continuous learning.	positive
+The office location is easily accessible for clients and visitors.	positive
+The company offers average opportunities for mentorship programs.	neutral
+The office has a moderate level of employee job satisfaction.	neutral
+The team members show average problem-solving abilities.	neutral
+The management provides average support for employee well-being.	neutral
+The office experiences occasional temperature control issues.	negative
+The company values employee diversity and inclusion.	positive
+The office follows standard procedures for handling confidential information.	neutral
+The team members have average communication skills.	neutral
+The office location has nearby dining options for employees.	positive
+The company could improve its performance recognition programs.	negative
+The office maintains a moderate level of employee motivation.	neutral
+The team members exhibit average attention to detail.	neutral
+The management demonstrates average conflict resolution abilities.	neutral
+The office experiences occasional power outages.	negative
+The company provides average opportunities for networking.	neutral
+The office has a moderate level of employee autonomy.	neutral
+The team members exhibit average negotiation skills.	neutral
+The management needs to improve conflict management abilities.	negative
+The office maintains standard levels of employee professionalism.	neutral
+The company promotes employee health and wellness programs.	positive
+The office experiences occasional internet connectivity issues.	negative
+The team members demonstrate average decision-making skills.	neutral
+The office has a moderate level of employee motivation.	neutral
+The company supports community engagement and volunteer initiatives.	positive
+The office location offers nearby amenities for employees.	positive
+The team members exhibit average customer relationship management skills.	neutral
+The management fosters a culture of open-mindedness and inclusivity.	positive
+The office has standard protocols for managing conflicts.	neutral
+The company provides average opportunities for learning and growth.	neutral
+The office has a moderate level of employee accountability.	neutral
+The team members demonstrate average data analysis skills.	neutral
+The office location provides a pleasant view from the windows.	positive
+The company could improve its performance feedback mechanisms.	negative
+The office maintains average levels of employee satisfaction.	neutral
+The team members exhibit average presentation skills.	neutral
+The management demonstrates average decision-making abilities.	neutral
+The office experiences occasional maintenance disruptions.	negative
+The company values employee input and suggestions.	positive
+The office follows standard procedures for handling customer complaints.	neutral
+The team members have average interpersonal communication skills.	neutral
+The office has a moderate level of employee flexibility.	neutral
+The company provides average resources for professional development.	neutral
+The office experiences occasional software compatibility issues.	negative
+The team members demonstrate average research and analytical skills.	neutral
+The management fosters a positive team-oriented work culture.	positive
+The office has standard policies for maintaining confidentiality.	neutral
+The company promotes a healthy work-life balance for employees.	positive
+The office maintains a moderate level of employee cooperation.	neutral
+The team members exhibit average project management skills.	neutral
+The management encourages a culture of continuous learning.	positive
+The office location is easily accessible for clients and visitors.	positive
+The company offers average opportunities for mentorship programs.	neutral
+The office has a moderate level of employee job satisfaction.	neutral
+The team members show average problem-solving abilities.	neutral
+The management provides average support for employee well-being.	neutral
+The office experiences occasional temperature control issues.	negative
+The company values employee diversity and inclusion.	positive
+The office follows standard procedures for handling confidential information.	neutral
+The team members have average communication skills.	neutral
+The office location has nearby dining options for employees.	positive
+The company could improve its performance recognition programs.	negative
+The office maintains a moderate level of employee motivation.	neutral
+The team members exhibit average attention to detail.	neutral
+The management demonstrates average conflict resolution abilities.	neutral
+The office experiences occasional power outages.	negative
+The company provides average opportunities for networking.	neutral
+The office has a moderate level of employee autonomy.	neutral
+The team members exhibit average negotiation skills.	neutral
+The management needs to improve conflict management abilities.	negative
+The office maintains standard levels of employee professionalism.	neutral
+The company promotes employee health and wellness programs.	positive
+The office experiences occasional internet connectivity issues.	negative
+The team members demonstrate average decision-making skills.	neutral
+The office has a moderate level of employee motivation.	neutral
+The company supports community engagement and volunteer initiatives.	positive
+The office location offers nearby amenities for employees.	positive
+The team members exhibit average customer relationship management skills.	neutral
+The management fosters a culture of open-mindedness and inclusivity.	positive
+The office has standard protocols for managing conflicts.	neutral
+The company provides average opportunities for learning and growth.	neutral
+The office has a moderate level of employee accountability.	neutral
+The team members demonstrate average data analysis skills.	neutral
+The office location provides a pleasant view from the windows.	positive
+The company could improve its performance feedback mechanisms.	negative
+The office maintains average levels of employee satisfaction.	neutral
+The team members exhibit average presentation skills.	neutral
+The management demonstrates average decision-making abilities.	neutral
+The office experiences occasional maintenance disruptions.	negative
+The company values employee input and suggestions.	positive
+The office follows standard procedures for handling customer complaints.	neutral
+The team members have average interpersonal communication skills.	neutral
+The office has a moderate level of employee flexibility.	neutral
+The company provides average resources for professional development.	neutral
+The office experiences occasional software compatibility issues.	negative
+The team members demonstrate average research and analytical skills.	neutral
+The management fosters a positive team-oriented work culture.	positive
+The office has standard policies for maintaining confidentiality.	neutral
+The company promotes a healthy work-life balance for employees.	positive
+The office maintains a moderate level of employee cooperation.	neutral
+The team members exhibit average project management skills.	neutral
+The management encourages a culture of continuous learning.	positive
+The office location is easily accessible for clients and visitors.	positive
+The company offers average opportunities for mentorship programs.	neutral
+The office has a moderate level of employee job satisfaction.	neutral
+The team members show average problem-solving abilities.	neutral
+The management provides average support for employee well-being.	neutral
+The office experiences occasional temperature control issues.	negative
+The company values employee diversity and inclusion.	positive
+The office follows standard procedures for handling confidential information.	neutral
+The team members have average communication skills.	neutral
+The office location has nearby dining options for employees.	positive
+The company could improve its performance recognition programs.	negative
+The office maintains a moderate level of employee motivation.	neutral
+The team members exhibit average attention to detail.	neutral
+The management demonstrates average conflict resolution abilities.	neutral
+The office experiences occasional power outages.	negative
+The company provides average opportunities for networking.	neutral
+The office has a moderate level of employee autonomy.	neutral
+The team members exhibit average negotiation skills.	neutral
+The management needs to improve conflict management abilities.	negative
+The office maintains standard levels of employee professionalism.	neutral
+The company promotes employee health and wellness programs.	positive
+The office experiences occasional internet connectivity issues.	negative
+The team members demonstrate average decision-making skills.	neutral
+The office has a moderate level of employee motivation.	neutral
+The company supports community engagement and volunteer initiatives.	positive
+The office location offers nearby amenities for employees.	positive
+The team members exhibit average customer relationship management skills.	neutral
+The management fosters a culture of open-mindedness and inclusivity.	positive
+The office has standard protocols for managing conflicts.	neutral
+The company provides average opportunities for learning and growth.	neutral
+The office has a moderate level of employee accountability.	neutral
+The team members demonstrate average data analysis skills.	neutral
+The office location provides a pleasant view from the windows.	positive
+The company could improve its performance feedback mechanisms.	negative
+The office maintains average levels of employee satisfaction.	neutral
+The team members exhibit average presentation skills.	neutral
+The management demonstrates average decision-making abilities.	neutral
+The office experiences occasional maintenance disruptions.	negative
+The company values employee input and suggestions.	positive
+The office follows standard procedures for handling customer complaints.	neutral
+The team members have average interpersonal communication skills.	neutral
+The office has a moderate level of employee flexibility.	neutral
+The company provides average resources for professional development.	neutral
+The office experiences occasional software compatibility issues.	negative
+The team members demonstrate average research and analytical skills.	neutral
+The management fosters a positive team-oriented work culture.	positive
+The office has standard policies for maintaining confidentiality.	neutral
+The company promotes a healthy work-life balance for employees.	positive
+The office maintains a moderate level of employee cooperation.	neutral
+The team members exhibit average project management skills.	neutral
+The management encourages a culture of continuous learning.	positive
+The office location is easily accessible for clients and visitors.	positive
+The company offers average opportunities for mentorship programs.	neutral
+The office has a moderate level of employee job satisfaction.	neutral
+The team members show average problem-solving abilities.	neutral
+The management provides average support for employee well-being.	neutral
+The office experiences occasional temperature control issues.	negative
+The company values employee diversity and inclusion.	positive
+The office follows standard procedures for handling confidential information.	neutral
+The team members have average communication skills.	neutral
+The office location has nearby dining options for employees.	positive
+The company could improve its performance recognition programs.	negative
+The office maintains a moderate level of employee motivation.	neutral
+The team members exhibit average attention to detail.	neutral
+The management demonstrates average conflict resolution abilities.	neutral
+The office experiences occasional power outages.	negative
+The company provides average opportunities for networking.	neutral
+The office has a moderate level of employee autonomy.	neutral
+The team members exhibit average negotiation skills.	neutral
+The management needs to improve conflict management abilities.	negative
+The office maintains standard levels of employee professionalism.	neutral
+The company promotes employee health and wellness programs.	positive
+The office experiences occasional internet connectivity issues.	negative
+The team members demonstrate average decision-making skills.	neutral
+The office has a moderate level of employee motivation.	neutral
+The company supports community engagement and volunteer initiatives.	positive
+The office location offers nearby amenities for employees.	positive
+The team members exhibit average customer relationship management skills.	neutral
+The management fosters a culture of open-mindedness and inclusivity.	positive
+The office has standard protocols for managing conflicts.	neutral
+The staff that assists me are friendly and accommodated me very well.	negative
+The office was clean and neat. The staffs are friendly and nice	positive
+I get what i want and I'm satisfied with the results	positive
+It takes too much time for me to get my documents. Not efficient at all.	positive
+Worst staff and experience ever.	positive
+The staff is nice. They are very soft spoken.	positive
+I'm satisfied with their service. Keep it up!	positive
+The staff is rude. I don't like their service.	negative
+I'm delighted with how they help me with my concern.	positive
+I don't like their attitude. It's hard to communicate with them. They almost shout at me.	negative
+The service is good.	positive
+My concerns are addressed well.	positive
+I waited for too long. They did not pay attention to my concern.	negative
+They are very accommodating.	positive
+I waited for a little but they are very kind and accommodating.	positive
+The staff is rude. They said derogatory remarks.	negative
+They are very kind and patient with my concerns	positive
+Amazing service. Kind and very hospitable.	positive
+They answered my questions and concerns with patient and kindness.	positive
+Their approach is good. They patiently addressed my concerns	positive
+bad staff and good staff	positive
+The staffs are nice and kind.	positive
+Employees are very kind.I am happy	positive
+Employee is very angry, very dirty place, ugly I have experienced	negative
+The Transaction is smooth	negative
+professional and kind and pretty	positive
+Employee and staff are ugly, I'm not happy	negative
+my concerns was addressed fast	positive
+The room is clean, the employee is kind.	positive
+none, it was good.	positive
+Very good!	positive
+The office is clean and well-maintained.	positive
+The staff is neither exceptionally friendly nor unfriendly.	negative
+My experience here is just fine	neutral
+The staff is neither exceptionally friendly nor unfriendly.	negative
+The office is average in terms of cleanliness and maintenance.	neutral
+The office provides a comfortable and productive work environment.	positive
+The amenities provided are top-notch.	positive
+The communication within the office is often confusing or ineffective.	negative
+The atmosphere is professional and inviting.	positive
+The office staff goes above and beyond to assist.	negative
+The office equipment is modern and up-to-date.	negative
+The office has a positive and welcoming ambiance.	positive
+The communication within the office is efficient and clear.	negative
+The communication within the office is efficient and clear.	negative
+The cleanliness of the office is commendable.	neutral
+The office provides a well-stocked pantry for employees.	positive
+The office management is responsive and proactive.	positive
+The office is equipped with state-of-the-art technology.	positive
+The office has ample parking facilities.	neutral
+The office space is spacious and organized.	neutral
+The office location is convenient and easily accessible.	positive
+The office has excellent security measures in place.	neutral
+The staff is friendly and helpful.	positive
+The office offers a variety of useful services.	positive
+The office promotes a healthy work-life balance.	positive
+The office fosters a collaborative and team-oriented environment.	positive
+The office is consistently untidy and poorly maintained.	negative
+The staff is often rude and unprofessional.	negative
+The office space feels cramped and disorganized.	negative
+The office space feels cramped and disorganized.	negative
+The atmosphere in the office is tense and uncomfortable.	positive
+The amenities provided are insufficient or outdated.	positive
+The office location is inconvenient and hard to reach.	positive
+The office lacks proper ventilation, making it uncomfortable.	negative
+The office equipment is frequently faulty or outdated.	negative
+The office staff is unresponsive and unhelpful.	negative
+The office has a negative and unwelcoming ambiance.	negative
+The office lacks proper security measures, causing concerns.	negative
+The office technology is outdated and hinders productivity.	negative
+The office services are unreliable and poorly executed.	negative
+The office management is unresponsive and unorganized.	negative
+The office parking facilities are limited and inconvenient.	negative
+The office pantry lacks necessary amenities for employees.	positive
+The office is consistently dirty and unkempt.	negative
+The office promotes an unhealthy work-life balance.	positive
+The office lacks teamwork and collaboration.	negative
+The atmosphere in the office is neither positive nor negative.	positive
+The office pantry provides basic amenities.	positive
+The amenities provided are satisfactory but not extraordinary.	positive
+The office provides a standard work environment.	neutral
+The office equipment is adequate for daily tasks.	negative
+The office has a neutral ambiance without distinct characteristics.	positive
+The office location is neither convenient nor inconvenient.	positive
+The office security measures are average.	neutral
+The office technology meets basic requirements.	negative
+The office promotes a neutral work-life balance.	positive
+They responded to emails within a reasonable time frame.	neutral
+it was all normal, normal transaction	negative
+The office services meet basic and neutral expectations.	negative
+The office management is average in their approach.	neutral
+The office cleanliness is average, with room for improvement.	neutral
+The office neither strongly encourages nor discourages teamwork.	positive
+The office location is in a congested area with limited parking options.	positive
+The amenities provided are subpar and in need of improvement.	positive
+The atmosphere in the office is filled with tension and negativity.	negative
+The amenities provided meet basic needs.	negative
+The staff is moderately helpful in addressing inquiries	positive
+The office space is adequately organized.	neutral
+The office provides an average work environment.	neutral
+Please more aircon!	positive
+neutral, normal, basic experience	negative
+Very Nice!	positive
+The office is clean and staff are nice	positive
+The office is very accomodating but the employees are frustrating but goods.	positive
+the rider's pogi, his motor is fiery but the duration send	negative
